@@ -1,0 +1,9 @@
+graphene==2.1.9
+inflection
+pandas
+numpy
+mlflow==1.19.0
+Flask==2.0.1
+boto3
+texttable
+PyYAML==5.4.1

@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  # MlFlow server, provides an HTTP API and HTTP Web Interface
+  mlflow_server:
+    build:
+      context: .
+      dockerfile: containers/server.Dockerfile
+      target: local-mlflow
+    environment:
+      BUCKET: s3://${AWS_ARTIFACTS_BUCKET:?AWS_ARTIFACTS_BUCKET should be set}
+    volumes:
+    - $HOME/.aws/:/root/.aws/
+    - ./mnt:/mnt
+    ports:
+    - "5000:5000"
+
+# Network for MlFlow server
+networks:
+  ml:
+    name: ml
+    driver: overlay
