@@ -262,3 +262,7 @@ arn:aws:lambda:us-east-1:57xxxxxxxxxxx5:function:wine-quality-prediction-invocat
 ```
 
 7. Query over HTTP (using JSON / GraphQL / CSV) your model, you can use [a prebuilt Postman collection](https://github.com/odahu/odahu-mlflow-aws-example/blob/develop/ml_service/AWS.postman_collection.json).
+
+## Example model
+
+You can take [a wine quality model](https://github.com/odahu/odahu-mlflow-aws-example/tree/develop) as an example.
